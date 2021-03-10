@@ -1,0 +1,40 @@
+---
+title: DK | Projects
+layout: default.njk
+---
+
+    
+{% block content %}
+
+
+<div class="flex flex-col items-center md:flex-row md:items-start justify-center mt-8">
+
+    <div class="w-full md:w-2/5 lg:w-1/5 mb-8">
+        <h1>Recent Projects</h1>
+    </div>
+
+    <div class="w-full lg:w-3/5 md:max-h-screen md:overflow-auto pb-64">
+            {%- for project in collections.project -%}
+            <a href="/projects/{{project.data.slug}}">
+                <div class="flex flex-col md:flex-row mb-4 md:text-right px-2">
+
+                    <div class="md:w-1/2 mr-2">
+                        <h4>{{project.data.title}}</h4>
+                        <p>{{project.data.stack}}</p>
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <img class="w-full sm:w-3/4 md:w-full "src="{{project.data.img}}" />
+                    </div>
+                </div>
+            </a>
+            {%- endfor -%}
+        
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

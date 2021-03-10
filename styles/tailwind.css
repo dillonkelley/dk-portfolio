@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .change {
+    color: black;
+  }
+  .markdown {
+    @apply text-left leading-6 tracking-wide;
+  }
+  .markdown h1 {
+    @apply text-3xl my-4;
+  }
+  .markdown h2 {
+    @apply text-xl my-4 font-bold;
+  }
+
+  h1 {
+    @apply text-4xl font-display;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  p,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-body;
+  }
+  p,
+  a {
+    @apply font-body;
+  }
+}
+
+/* gradient animation */
+.pysch-bar {
+  background: linear-gradient(
+    270deg,
+    #ff0d0d,
+    #efff0d,
+    #2fff0d,
+    #0d52ff,
+    #ff0000
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: pys-minimalism 30s ease infinite;
+  -moz-animation: pys-minimalism 30s ease infinite;
+  animation: pys-minimalism 30s ease infinite;
+}
+
+@-webkit-keyframes pys-minimalism {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes pys-minimalism {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes pys-minimalism {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
