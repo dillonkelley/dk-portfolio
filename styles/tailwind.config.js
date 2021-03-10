@@ -7,8 +7,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      display: ["Source Code Pro"],
-      body: ["PT Sans"],
+      display: ["Fascinate", "cursive"],
+      body: ["Quicksand"],
     },
     extend: {
       colors: {

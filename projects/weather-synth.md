@@ -7,13 +7,9 @@ img: https://res.cloudinary.com/dilldog-industries/image/upload/v1615326404/dill
 
 # Weather Synthesis
 
-A simple weather app that generates a Tone.js sequencer
+Repo:
 
-## About
-
-The search field fetches data about the entered location. That data is used to modify the synthesizer and sequencer built in Tone.js. The rate of the sequence is calculated based on what time of the day you are using the app. Currently, the rate (or BPM) is set to increase throughout the day.
-
-Once the search event is fired, the Tone.js synthesizer is visualized through pts.js.
+Website: [https://pacific-wave-90389.herokuapp.com/]
 
 ## Tech:
 
@@ -23,6 +19,14 @@ Once the search event is fired, the Tone.js synthesizer is visualized through pt
 - Handlebars
 - mapbox API and weatherstack API
 - postman-request
+
+![interface of weather synth](https://res.cloudinary.com/dilldog-industries/image/upload/v1615403787/dills-corner/weather_tones.png)
+
+## About
+
+The search field fetches data about the entered location. That data is used to modify the synthesizer and sequencer built in Tone.js. The rate of the sequence is calculated based on what time of the day you are using the app. Currently, the rate (or BPM) is set to increase throughout the day.
+
+Once the search event is fired, the Tone.js synthesizer is visualized through pts.js.
 
 ## Inspiration:
 

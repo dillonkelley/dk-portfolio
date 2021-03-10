@@ -6,20 +6,26 @@ layout: default.njk
 
 
 {% block content %}
-  <div class="fixed inset-0 flex justify-center items-center">
+  <div class="mt-16 md:mt-0 md:fixed inset-1 flex justify-center items-center ">
 
 
-    <div class="flex flex-wrap justify-center">
-      <div class="w-8/12 sm:w-4/12 md:w-3/12 px-4 rounded">
+    <div class="flex flex-wrap justify-center items-center">
+    
+      <div class="md:my-0 w-4/5 md:w-5/12 px-4 rounded">
         <img src="https://res.cloudinary.com/dilldog-industries/image/upload/w_600,ar_1:1,c_fill,g_auto/v1608144816/dills-corner/dillon-ice-cream_x2ikbd.jpg" 
-             class="shadow rounded-full sm:max-w-full h-auto align-middle border-none"
+             class="shadow rounded-full w-full sm:max-w-full h-auto align-middle border-none"
         />
       </div>
-      <div class="clear-right text-2xl p-4 font-display max-w-lg">
-        <h1 class="text-3xl font-bold">I'm Dillon.</h1>
-        <h2 class="text-bold">Fullstack Javascript Dev based out of <span class="underline">Chicago</span>.</h2>
-        <h2>Freelance and side <a href="/projects" class="text-blue-500 hover:bg-yellow-200 font-bold">projects</a> coded with modern JS practices.
-        <h2><a href="/contact" class="text-blue-500 hover:bg-yellow-200 font-bold">Hire me</a> for your next project.</h2>
+      <div class="text-left text-2xl p-4 font-display max-w-lg md:max-w-3xl">
+        <h1 class="text-center text-5xl md:text-left md:text-6xl font-bold pb-2">I'm Dillon</h1>
+        <h3 class="text-bold">Fullstack Javascript Dev based out of <span class="">Chicago</span></h3>
+        <h3>Freelance and side <a href="/projects" class="border-b-2 border-black border-dotted hover:border-none">projects</a> coded with modern JS practices</h3>
+        <h3><a href="/contact" class="border-b-2 border-black border-dotted hover:border-none">Hire me</a> for your next project</h3>
+
+         <div class="flex justify-center md:justify-start space-x-6 align-center pt-4">
+            <a class="hover-state" href="https://github.com/digthedill" target="_blank"><i class="fab fa-github text-2xl"></i></a>
+            <a class="hover-state" href="https://www.linkedin.com/in/dillonkelley-pro/" target="_blank"><i class="fab fa-linkedin-in text-2xl"></i></a>
+        </div>
       </div>
     </div>
 

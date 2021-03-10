@@ -7,13 +7,30 @@
     color: black;
   }
   .markdown {
-    @apply text-left leading-6 tracking-wide;
+    @apply text-left leading-6 tracking-wide mx-8;
   }
+
+  .markdown iframe {
+    @apply my-4;
+  }
+
   .markdown h1 {
-    @apply text-3xl my-4;
+    @apply text-3xl my-16;
+  }
+  .markdown img {
+    @apply max-w-xl rounded-lg py-4;
   }
   .markdown h2 {
     @apply text-xl my-4 font-bold;
+  }
+  .hover-state:hover {
+    @apply text-white bg-blue-500;
+  }
+  .markdown ul {
+    @apply list-disc;
+  }
+  .markdown a:hover {
+    @apply text-white bg-blue-500;
   }
 
   h1 {
@@ -36,8 +53,8 @@
     @apply font-body;
   }
   p,
-  a {
-    @apply font-body;
+  li {
+    @apply font-body text-lg;
   }
 }
 
