@@ -56,6 +56,10 @@
   li {
     @apply font-body text-lg;
   }
+
+  input {
+    @apply border-b-2 border-b-gray-600 px-1 py-4;
+  }
 }
 
 /* gradient animation */
