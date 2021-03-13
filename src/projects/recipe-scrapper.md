@@ -22,11 +22,12 @@ Website: <a class="mb-2 hover-state underline hover:no-underline mb-2" href="htt
 <div class="relative" style="padding-top: 56.25%">
 <iframe class="absolute inset-0 w-full h-full my-4" src="https://www.youtube.com/embed/RgV-MHk8eD4?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br><br>
 
 ## About
 
 The idea for this site/app came from my Mom. She always keeps tabs of recipe sites open on her computer so she won't lose the recipe. I offered her this so she can close out her tabs.
-\
+<br><br>
 This project's frontend is built with Vue.js and Bootstrap. I used this project to get familiar with Vue. The authentication is handled by firebase. I like the easy googleAuth setup and used it for this app.
-\
+<br><br>
 The node scrapper is built using Axios and Cheerio. The focus of this web scraper is for food recipes across different websites. The challenge was manually scrapping websites.

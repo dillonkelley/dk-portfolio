@@ -1,3 +1,3 @@
 module.exports = {
-  layout: "default.njk",
+  layout: 'default.njk',
 };

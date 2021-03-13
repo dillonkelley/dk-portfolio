@@ -22,11 +22,12 @@ website: <a href="https://socially-distanced-trivia.vercel.app/" target="_blank"
 <div class="relative mb-8" style="padding-top: 56.25%">
 <iframe class="absolute inset-0 w-full h-full my-4" src="https://www.youtube.com/embed/RgV-MHk8eD4?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br><br>
 
 ## About
 
 The game works without user authentication. To start a game, click start game and socket.io will create a game room. Only the creator of the room has control of starting the game. You can invite friends to join your room.
-
+<br><br>
 The user information, room, and scoring is stored in mongoDb Atlas. Using socket.io, the user is stored and removed once they open or close the app. This technique will prevent the database from becoming too large.
 
 ## More..

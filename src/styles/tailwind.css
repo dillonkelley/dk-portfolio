@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer utilities {
-  .change {
-    color: black;
+  html {
+    @apply bg-white;
   }
   .markdown {
     @apply text-left leading-6 tracking-wide mx-8;
@@ -15,7 +15,7 @@
   }
 
   .scroller :after {
-    content: "";
+    content: '';
     height: 50px;
     display: block;
   }
@@ -30,13 +30,16 @@
     @apply text-xl my-4 font-bold;
   }
   .hover-state:hover {
-    @apply text-white bg-blue-500;
+    @apply text-white bg-blue;
   }
   .markdown ul {
     @apply list-disc;
   }
   .markdown a:hover {
-    @apply text-white bg-blue-500;
+    @apply text-white bg-blue;
+  }
+  .markdown p {
+    @apply leading-loose;
   }
 
   h1 {
@@ -64,20 +67,13 @@
   }
 
   input {
-    @apply border-b border-gray-600 px-1 py-4;
+    @apply border-b border-gray-dark bg-white px-1 py-4;
   }
 }
 
 /* gradient animation */
 .pysch-bar {
-  background: linear-gradient(
-    270deg,
-    #ff0d0d,
-    #efff0d,
-    #2fff0d,
-    #0d52ff,
-    #ff0000
-  );
+  background: linear-gradient(270deg, #ff0d0d, #efff0d, #2fff0d, #0d52ff, #ff0000);
   background-size: 1000% 1000%;
 
   -webkit-animation: pys-minimalism 30s ease infinite;

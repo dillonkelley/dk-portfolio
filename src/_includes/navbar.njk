@@ -2,16 +2,16 @@
       class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
       x-data="{ isOpen: false }"
       @keydown.escape="isOpen = false"
-      :class="{ 'shadow-lg bg-green-200' : isOpen , 'bg-white' : !isOpen}"
+      :class="{ 'shadow-lg bg-green-light' : isOpen , 'bg-white' : !isOpen}"
     >
       <!--Logo etc-->
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <a
-          class="text-black no-underline hover:text-blue-900 "
+          class="text-black no-underline hover:text-blue "
           href="/"
         >
           <div class="pl-2 w-16">
-            <img class="hover:bg-blue-500 rounded" src="https://res.cloudinary.com/dilldog-industries/image/upload/w_100/v1615325563/dills-corner/DK_b08umu.png" alt="dk-logo" />
+            <img class="hover:bg-blue rounded" src="https://res.cloudinary.com/dilldog-industries/image/upload/w_100/v1615325563/dills-corner/DK_b08umu.png" alt="dk-logo" />
           </div>
         </a>
       </div>
@@ -20,7 +20,7 @@
       <button
         @click="isOpen = !isOpen"
         type="button"
-        class="block lg:hidden px-2 text-gray-500 hover:text-blue-900 focus:outline-none focus:text-green-900"
+        class="block lg:hidden px-2 text-gray-darkest hover:text-blue-dark focus:outline-none focus:text-green-dark"
         :class="{ 'transition transform-180': isOpen }"
       >
         <svg
@@ -54,7 +54,7 @@
         >
           <li class="mr-3">
             <a
-              class="inline-block text-gray-800 no-underline hover:bg-blue-500 hover:text-white mx-4 text-xl"
+              class="inline-block text-gray-darkest no-underline hover:bg-blue hover:text-white mx-4 text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/projects"
               @click="isOpen = false"
@@ -63,7 +63,7 @@
           </li>
           <li class="mr-3">
             <a
-              class="inline-block text-gray-800 no-underline hover:bg-blue-500 hover:text-white mx-4 text-xl"
+              class="inline-block text-gray-darkest no-underline hover:bg-blue hover:text-white mx-4 text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/about"
               @click="isOpen = false"
@@ -72,7 +72,7 @@
           </li>
           <li class="mr-3">
             <a
-              class="inline-block text-gray-800 no-underline hover:bg-blue-500 hover:text-white mx-4 text-xl"
+              class="inline-block text-gray-darkest no-underline hover:bg-blue hover:text-white mx-4 text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/contact"
               @click="isOpen = false"
