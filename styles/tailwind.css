@@ -14,8 +14,14 @@
     @apply my-4;
   }
 
+  .scroller :after {
+    content: "";
+    height: 50px;
+    display: block;
+  }
+
   .markdown h1 {
-    @apply text-3xl my-16;
+    @apply text-3xl my-4;
   }
   .markdown img {
     @apply max-w-xl rounded-lg py-4;
@@ -58,7 +64,7 @@
   }
 
   input {
-    @apply border-b-2 border-b-gray-600 px-1 py-4;
+    @apply border-b border-gray-600 px-1 py-4;
   }
 }
 

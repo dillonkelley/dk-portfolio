@@ -1,15 +1,15 @@
 ---
 title: Weather Synth
-stack: node, express, hbs, tone.js
+stack: [node, express, hbs, tone.js]
 slug: weather-synth
-img: https://res.cloudinary.com/dilldog-industries/image/upload/v1615326404/dills-corner/weather-synth.png
+img: https://res.cloudinary.com/dilldog-industries/image/upload/v1615526352/dills-corner/Screenshot_from_2021-03-11_23-17-14_ad9kmc.png
 ---
 
 # Weather Synthesis
 
-Repo:
+Repo: <a class="underline hover:no-underline mb:2" target="_blank" href="https://github.com/digthedill/weather-sequencer">Github</a>
 
-Website: [https://pacific-wave-90389.herokuapp.com/]
+Website: <a class="underline hover:no-underline" target="_blank" href="https://pacific-wave-90389.herokuapp.com/">Heroku App</a>
 
 ## Tech:
 
@@ -20,7 +20,9 @@ Website: [https://pacific-wave-90389.herokuapp.com/]
 - mapbox API and weatherstack API
 - postman-request
 
-![interface of weather synth](https://res.cloudinary.com/dilldog-industries/image/upload/v1615403787/dills-corner/weather_tones.png)
+<a href="https://pacific-wave-90389.herokuapp.com/" target="_blank">
+    <img class="w-full" src="https://res.cloudinary.com/dilldog-industries/image/upload/v1615403787/dills-corner/weather_tones.png" alt="weather synth demo" />
+</a>
 
 ## About
 

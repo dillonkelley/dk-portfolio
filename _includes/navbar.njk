@@ -45,7 +45,7 @@
       <!--Menu-->
       <div
         class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
-        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        :class="{ 'block shadow-3xl text-center': isOpen, 'hidden': !isOpen }"
         @click.away="isOpen = false"
         x-show.transition="true"
       >
@@ -55,6 +55,7 @@
           <li class="mr-3">
             <a
               class="inline-block text-gray-800 no-underline hover:bg-blue-500 hover:text-white mx-4 text-xl"
+              :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/projects"
               @click="isOpen = false"
               >Projects
@@ -63,6 +64,7 @@
           <li class="mr-3">
             <a
               class="inline-block text-gray-800 no-underline hover:bg-blue-500 hover:text-white mx-4 text-xl"
+              :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/about"
               @click="isOpen = false"
               >About
@@ -71,6 +73,7 @@
           <li class="mr-3">
             <a
               class="inline-block text-gray-800 no-underline hover:bg-blue-500 hover:text-white mx-4 text-xl"
+              :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/contact"
               @click="isOpen = false"
               >Contact
