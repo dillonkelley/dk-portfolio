@@ -3,36 +3,39 @@ title: Contact
 layout: default.njk
 ---
 
-
 {% block content %}
 
-{# similar layout to main page #}
-{# have a point of interest in a grid like patern and collapse for mobile #}
+    {# similar layout to main page #}
+    {# have a point of interest in a grid like patern and collapse for mobile #}
 
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-center mt-8 md:space-x-28">
 
-<div class="flex flex-col md:flex-row items-center md:items-start justify-center mt-8 md:space-x-28">
-
-    <div class="w-full sm:w-4/5 md:w-2/5 lg:w-1/2 mb-8 md:text-right w-3/4">
-        <h1 class="mb-2">Contact</h1>
-        <div class="flex space-x-4 md:justify-end">
-            <a class="hover-state" href="https://github.com/digthedill" target="_blank"><i class="fab fa-github text-xl"></i></a>
-            <a class="hover-state" href="https://www.linkedin.com/in/dillonkelley-pro/" target="_blank"><i class="fab fa-linkedin-in text-xl"></i></a>
-            <a class="hover-state" href="https://twitter.com/digthedill" target="_blank"><i class="fab fa-twitter text-xl"></i></a>
+        <div class="w-full sm:w-4/5 md:w-2/5 lg:w-1/2 mb-8 md:text-right w-3/4">
+            <h1 class="mb-2">Contact</h1>
+            <div class="flex space-x-4 md:justify-end">
+                <a class="hover-state" href="https://github.com/digthedill" target="_blank">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a class="hover-state" href="https://www.linkedin.com/in/dillonkelley-pro/" target="_blank">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a class="hover-state" href="https://twitter.com/digthedill" target="_blank">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="w-full sm:w-4/5 lg:w-3/5 md:max-h-screen">
-        <form action="https://getform.io/f/a5079c7a-ac05-4792-8bd7-15f0741cca4c" method="POST" 
+        <div class="w-full sm:w-4/5 lg:w-3/5 md:max-h-screen">
+            <form action="https://getform.io/f/a5079c7a-ac05-4792-8bd7-15f0741cca4c" method="POST" 
             class="flex flex-col space-y-16 align-center  md:w-3/4"
         >
-            <input class="contact" type="text" name="name" placeholder="Full Name" required>
-            <input class="contact" type="email" name="email" placeholder="coolguy@example.com" required>
-            <textarea class="resize-none h-44 border border-gray-dark p-4 bg-white" type="text" name="message" placeholder="Love your work, lets collab!" required></textarea>
-            <button type="submit" class="py-4 hover-state">Send</button>
-        </form>
+                <input class="contact" type="text" name="name" placeholder="Full Name" required>
+                <input class="contact" type="email" name="email" placeholder="coolguy@example.com" required>
+                <textarea class="resize-none h-44 border border-gray-dark p-4 bg-white" type="text" name="message" placeholder="Love your work, lets collab!" required></textarea>
+                <button type="submit" class="py-4 hover-state">Send</button>
+            </form>
+        </div>
+
     </div>
-
-</div>
-
 
 {% endblock %}
