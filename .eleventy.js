@@ -3,12 +3,11 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
-
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addWatchTarget('./_tmp/style.css');
 
-  // eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' });
+  eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' });
 
   eleventyConfig.setBrowserSyncConfig({
     files: './_site/tailwind.css',
@@ -18,11 +17,7 @@ module.exports = function (eleventyConfig) {
     './node_modules/alpinejs/dist/alpine.js': './js/alpine.js',
   });
 
-  eleventyConfig.addPassthroughCopy('assets');
-  // Browsersync config
-  // eleventyConfig.setBrowserSyncConfig(
-  //   require("./configs/browsersync.config")("_site")
-  // );
+  eleventyConfig.addPassthroughCopy('src/assets');
 
   eleventyConfig.addShortcode('version', function () {
     return String(Date.now());
@@ -41,7 +36,10 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // eleventyConfig.setTemplateFormats(['md', 'css', 'njk']);
+
   return {
-    dir: { input: 'src', output: '_site', data: '_data' },
+    passthroughFileCopy: true,
+    dir: { input: 'src', includes: '_includes', output: '_site', data: '_data' },
   };
 };

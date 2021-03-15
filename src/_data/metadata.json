@@ -1,0 +1,9 @@
+{
+    "title": "Dillon Kelley",
+    "url": "dkelley.dev",
+    "description": "My portfolio website built with 11ty and tailwind",
+    "author": {
+      "name": "dkelley.dev",
+      "email": "dillon@dkelley.dev"
+    }
+  }

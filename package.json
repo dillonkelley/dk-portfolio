@@ -1,7 +1,7 @@
 {
   "name": "dillon-dev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dillon Kelley is a fullstack developer open to working in an agency and happily creating freelance websites!",
   "main": "index.js",
   "scripts": {
     "start": "run-p start:*",

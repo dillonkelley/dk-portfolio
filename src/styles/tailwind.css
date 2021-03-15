@@ -27,19 +27,31 @@
     @apply max-w-xl rounded-lg py-4;
   }
   .markdown h2 {
-    @apply text-xl my-4 font-bold;
+    @apply text-xl my-8 font-bold;
   }
   .hover-state:hover {
     @apply text-white bg-blue;
   }
+  .markdown .img-link:hover {
+    @apply bg-none opacity-70;
+  }
   .markdown ul {
     @apply list-disc;
   }
+  .markdown a {
+    @apply underline;
+  }
   .markdown a:hover {
-    @apply text-white bg-blue;
+    @apply text-white bg-blue no-underline;
   }
   .markdown p {
     @apply leading-loose;
+  }
+  .markdown .btn {
+    @apply no-underline bg-blue text-white;
+  }
+  .markdown .btn:hover {
+    @apply no-underline bg-blue-light text-black;
   }
 
   h1 {
@@ -61,11 +73,14 @@
   h5 {
     @apply font-body;
   }
+
   p,
   li {
     @apply font-body text-lg;
   }
-
+  li {
+    @apply pb-2;
+  }
   input {
     @apply border-b border-gray-dark bg-white px-1 py-4;
   }

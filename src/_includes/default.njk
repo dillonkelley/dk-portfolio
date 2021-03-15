@@ -12,8 +12,8 @@
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="tailwind.css"/>
-    <link rel="icon" href="../assets/favicon.ico"/>
+    <link rel="stylesheet" href="/tailwind.css?v={% version %}"/>
+    <link rel="icon" href="/assets/favicon.ico?v={% version %}"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>
@@ -21,14 +21,14 @@
     <script src="/js/alpine.js?v={% version %}"></script>
 
   </head>
-  <body class="flex flex-col min-h-screen ">
+  <body class="flex flex-col min-h-screen">
     <header>
       {% include "navbar.njk"%}
 
     </header>
     {% block content %}
 
-      <main class="flex-grow min-h-screen">
+      <main class="flex-grow min-h-screen mb-16">
         <div class="pysch-bar h-10 mt-20 z-30"></div>
         <div class="container mx-auto px-8 bg-white max-w-screen-lg">
           {{ content | safe }}

@@ -1,8 +1,11 @@
 <nav
       class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
-      x-data="{ isOpen: false }"
+      x-data="{ 
+        isOpen: false,
+         }"
       @keydown.escape="isOpen = false"
       :class="{ 'shadow-lg bg-green-light' : isOpen , 'bg-white' : !isOpen}"
+      :aria-expanded="isOpen"
     >
   <!--Logo etc-->
   <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -22,6 +25,8 @@
         type="button"
         class="block lg:hidden px-2 text-gray-darkest hover:text-blue-dark focus:outline-none focus:text-green-dark"
         :class="{ 'transition transform-180': isOpen }"
+        :aria-expanded="isOpen"
+        aria-controls="nav-list"
       >
     <svg
           class="h-6 w-6 fill-current"
@@ -54,7 +59,7 @@
         >
       <li class="mr-3">
         <a
-              class="inline-block text-gray-darkest no-underline hover:bg-blue hover:text-white mx-4 text-xl"
+              class="inline-block text-gray-darkest hover-state mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-4xl lg:text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/projects"
               @click="isOpen = false"
@@ -63,7 +68,7 @@
       </li>
       <li class="mr-3">
         <a
-              class="inline-block text-gray-darkest no-underline hover:bg-blue hover:text-white mx-4 text-xl"
+              class="inline-block text-gray-darkest hover-state mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-4xl lg:text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/about"
               @click="isOpen = false"
@@ -72,7 +77,7 @@
       </li>
       <li class="mr-3">
         <a
-              class="inline-block text-gray-darkest no-underline hover:bg-blue hover:text-white mx-4 text-xl"
+              class="inline-block text-gray-darkest hover-state mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-4xl lg:text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/contact"
               @click="isOpen = false"
