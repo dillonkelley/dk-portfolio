@@ -1,9 +1,28 @@
 {
-    "title": "Dillon Kelley",
-    "url": "dkelley.dev",
-    "description": "My portfolio website built with 11ty and tailwind",
-    "author": {
-      "name": "dkelley.dev",
-      "email": "dillon@dkelley.dev"
+  "title": "Dillon Kelley",
+  "url": "https://dkelley.dev",
+  "description": "Web developer based in Chicago. This is my portfolio website built with 11ty and tailwind",
+  "author": {
+    "name": "dkelley.dev",
+    "email": "dillon@dkelley.dev",
+    "twitterHandle": "digthedill"
+  },
+  "defaultSocialImage": "https://res.cloudinary.com/dilldog-industries/image/upload/v1608144816/dills-corner/dillon-ice-cream_x2ikbd.jpg",
+  "socialLinks": [
+    {
+      "text": "LinkedIn",
+      "url": "https://www.linkedin.com/in/dillonkelley-pro/",
+      "external": true
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/digthedill",
+      "external": true
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/digthedill",
+      "external": true
     }
-  }
+  ]
+}

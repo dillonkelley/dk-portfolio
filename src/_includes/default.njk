@@ -7,11 +7,32 @@
       {% endblock %}
     </title>
     <meta charset="UTF-8"/>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+
+    <meta property="og:title" content="{{  title or metadata.name | escape }}">
+    <meta property="og:site_name" content="{{ metadata.name }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ metadata.url}}"/>
+
+    {% if metadata.author.twitterHandle %}
+      <meta name="twitter:creator" content="@{{ metadata.author.twitterHandle | replace('@', '') }}"/>
+    {% endif %}
+
+    {% set desc = description %}
+    {% if not desc %}
+      {% set desc = content | striptags | truncate(140) %}
+    {% endif %}
+    {% if desc %}
+      <meta name="description" content="{{ desc | escape  }}">
+      <meta property="og:description" content="{{ desc | escape }}">
+      <meta name="description" content="{{ desc | escape }}"/>
+    {% endif %}
+
+    {% if not socialImage %}
+      {% set socialImage = metadata.defaultSocialImage %}
+    {% endif %}
+
     <link rel="stylesheet" href="/tailwind.css?v={% version %}"/>
     <link rel="icon" href="/assets/favicon.ico?v={% version %}"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
