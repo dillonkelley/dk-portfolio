@@ -1,3 +1,194 @@
-<!doctype html><html lang="en"><head><title>Weather Synth</title><meta charset="UTF-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"><meta property="og:title" content="Weather Synth"><meta property="og:site_name" content=""><meta property="og:type" content="website"><meta property="og:url" content="https://dkelley.dev"><meta name="robots" content="max-snippet:20, max-image-preview:large"><meta name="twitter:creator" content="@digthedill"><meta name="description" content="Back to Projects Weather Synthesis Repo: Github Website: Heroku App Tech Tone.js pts.js Node/Express Handlebars mapbox API and weatherstack..."><meta property="og:description" content="Back to Projects Weather Synthesis Repo: Github Website: Heroku App Tech Tone.js pts.js Node/Express Handlebars mapbox API and weatherstack..."><meta name="description" content="Back to Projects Weather Synthesis Repo: Github Website: Heroku App Tech Tone.js pts.js Node/Express Handlebars mapbox API and weatherstack..."><link rel="stylesheet" href="/tailwind.css?v=1616013240045"><link rel="icon" href="/assets/favicon.ico?v=1616013240045"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&family=Quicksand:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"><script src="/js/alpine.js?v=1616013240045"></script></head><body class="flex flex-col h-screen"><header><nav class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0" x-data="{ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      
+        Weather Synth
+      
+    </title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+
+    <meta property="og:title" content="Weather Synth">
+    <meta property="og:site_name" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://dkelley.dev"/>
+    <meta name="robots" content="max-snippet:20, max-image-preview:large"/>
+
+    
+      <meta name="twitter:creator" content="@digthedill"/>
+    
+
+    
+    
+      
+    
+    
+      <meta name="description" content="Back to Projects Weather Synthesis Repo: Github Website: Heroku App Tech Tone.js pts.js Node/Express Handlebars mapbox API and weatherstack...">
+      <meta property="og:description" content="Back to Projects Weather Synthesis Repo: Github Website: Heroku App Tech Tone.js pts.js Node/Express Handlebars mapbox API and weatherstack...">
+      <meta name="description" content="Back to Projects Weather Synthesis Repo: Github Website: Heroku App Tech Tone.js pts.js Node/Express Handlebars mapbox API and weatherstack..."/>
+    
+
+    
+      
+    
+
+    <link rel="stylesheet" href="/tailwind.css?v=1616015495327"/>
+    <link rel="icon" href="/assets/favicon.ico?v=1616015495327"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>
+    
+    <script src="/js/alpine.js?v=1616015495327"></script>
+
+  </head>
+  <body class="flex flex-col h-screen">
+    <header>
+      <nav
+      class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
+      x-data="{ 
         isOpen: false,
-         }" @keydown.escape="isOpen = false" :class="{ 'shadow-lg bg-green-light' : isOpen , 'bg-white' : !isOpen}" :aria-expanded="isOpen"><div class="flex items-center flex-shrink-0 text-white mr-6"><a class="text-black no-underline hover:text-blue" href="/"><div class="pl-2 w-16"><img class="hover:bg-blue rounded" src="https://res.cloudinary.com/dilldog-industries/image/upload/w_100/v1615325563/dills-corner/DK_b08umu.png" alt="dk-logo"></div></a></div><button @click="isOpen = !isOpen" type="button" class="block lg:hidden px-2 text-gray-darkest hover:text-blue-dark focus:outline-none focus:text-green-dark" :class="{ 'transition transform-180': isOpen }" :aria-expanded="isOpen" aria-controls="nav-list"><svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/><path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/></svg></button><div class="w-full flex-grow lg:flex lg:items-center lg:w-auto" :class="{ 'block shadow-3xl text-center': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true"><ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-start"><li class="mr-3"><a class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl" :class="{ 'text-center my-4': isOpen, '': !isOpen }" href="/projects" @click="isOpen = false">Projects</a></li><li class="mr-3"><a class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl" :class="{ 'text-center my-4': isOpen, '': !isOpen }" href="/about" @click="isOpen = false">About</a></li><li class="mr-3"><a class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl" :class="{ 'text-center my-4': isOpen, '': !isOpen }" href="/contact" @click="isOpen = false">Contact</a></li></ul></div></nav></header><main><div class="pysch-bar h-12 mt-20 z-30"></div><div class="container flex-grow mb-16 mx-auto px-8 bg-white max-w-screen-lg min-h-screen"><article class="flex flex-col items-center markdown mb-20"><div class="max-w-screen-md"><br><br><div class="flex justify-end"><a class="px-4 py-2 bg-blue-light rounded-full btn" href="/projects">Back to Projects</a></div><br><h1>Weather Synthesis</h1><a href="https://pacific-wave-90389.herokuapp.com/" target="_blank"><img class="w-full" src="https://res.cloudinary.com/dilldog-industries/image/upload/v1615403787/dills-corner/weather_tones.png" alt="weather synth demo"></a><br><br><p>Repo: <a class="mb:2" target="_blank" href="https://github.com/digthedill/weather-sequencer">Github</a></p><p>Website: <a target="_blank" href="https://pacific-wave-90389.herokuapp.com/">Heroku App</a></p><h2>Tech</h2><ul><li>Tone.js</li><li>pts.js</li><li>Node/Express</li><li>Handlebars</li><li>mapbox API and weatherstack API</li><li>postman-request</li></ul><h2>About</h2><p>The search field fetches weather data about the entered location. That data is used to modify the synthesizer and sequencer's parameters built in Tone.js. The rate of the sequence is calculated based on what time of the day you are using the app. Keywords from the weather description trigger different sequences (arrays of notes that are looped). The most popular descriptor is &quot;cloudy&quot;, so that is the most heard sequence.<br><br>The visualizer takes the audio context from Tone.js and outputs a visualization of the wave shapes. This visualizer is built using an api built on top of html's canvas api called pts.js.<br><br>The biggest challenge with this project is consistency across platforms. Currently the audio doesn't work well on android phones, but is seems to work well with apple, iphone, and ubuntu.</p><h2>Inspiration:</h2><p>This project was inspired from the common weather apps used for students to learn servers and http requests. I thought it'd be interesting to generate some type of synthesizer from the parameters that are received from your weather forecast.<br><br>As for a conceptual inspiration, I have to acknowledge the brilliant, Brian Eno. His work in generative art and music is unparalleled.</p></div></article></div></main><footer class="pysch-bar flex justify-center items-center space-x-3 p-4 text-white z-10 mt-16"><p>© Dillon Kelley 2021</p></footer></body></html>
+         }"
+      @keydown.escape="isOpen = false"
+      :class="{ 'shadow-lg bg-green-light' : isOpen , 'bg-white' : !isOpen}"
+      :aria-expanded="isOpen"
+    >
+  <!--Logo etc-->
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <a
+          class="text-black no-underline hover:text-blue "
+          href="/"
+        >
+      <div class="pl-2 w-16">
+        <img class="hover:bg-blue rounded" src="https://res.cloudinary.com/dilldog-industries/image/upload/w_100/v1615325563/dills-corner/DK_b08umu.png" alt="dk-logo"/>
+      </div>
+    </a>
+  </div>
+
+  <!--Toggle button (hidden on large screens)-->
+  <button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-gray-darkest hover:text-blue-dark focus:outline-none focus:text-green-dark"
+        :class="{ 'transition transform-180': isOpen }"
+        :aria-expanded="isOpen"
+        aria-controls="nav-list"
+      >
+    <svg
+          class="h-6 w-6 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+      <path
+            x-show="isOpen"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+/>
+      <path
+            x-show="!isOpen"
+            fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+/>
+    </svg>
+  </button>
+
+  <!--Menu-->
+  <div
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl text-center': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true"
+      >
+    <ul
+          class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-start"
+        >
+      <li class="mr-3">
+        <a
+              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl"
+              :class="{ 'text-center my-4': isOpen, '': !isOpen }"
+              href="/projects"
+              @click="isOpen = false"
+              >Projects
+            </a>
+      </li>
+      <li class="mr-3">
+        <a
+              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl"
+              :class="{ 'text-center my-4': isOpen, '': !isOpen }"
+              href="/about"
+              @click="isOpen = false"
+              >About
+            </a>
+      </li>
+      <li class="mr-3">
+        <a
+              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl"
+              :class="{ 'text-center my-4': isOpen, '': !isOpen }"
+              href="/contact"
+              @click="isOpen = false"
+              >Contact
+            </a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav>
+
+    </header>
+    
+
+      <main>
+        <div class="pysch-bar h-12 mt-20 z-30"></div>
+        <div class="container flex-grow mb-16 mx-auto px-8 bg-white max-w-screen-lg min-h-screen">
+          
+<article class="flex flex-col items-center markdown mb-20">
+    <div class="max-w-screen-md">
+        <br><br>
+        <div class="flex justify-end">
+            <a class="px-4 py-2 bg-blue-light rounded-full btn" href="/projects">Back to Projects</a>
+        </div>
+        <br>
+        <h1>Weather Synthesis</h1>
+<a href="https://pacific-wave-90389.herokuapp.com/" target="_blank">
+    <img class="w-full" src="https://res.cloudinary.com/dilldog-industries/image/upload/v1615403787/dills-corner/weather_tones.png" alt="weather synth demo" />
+</a>
+<br><br>
+<p>Repo: <a class="mb:2" target="_blank" href="https://github.com/digthedill/weather-sequencer">Github</a></p>
+<p>Website: <a target="_blank" href="https://pacific-wave-90389.herokuapp.com/">Heroku App</a></p>
+<h2>Tech</h2>
+<ul>
+<li>Tone.js</li>
+<li>pts.js</li>
+<li>Node/Express</li>
+<li>Handlebars</li>
+<li>mapbox API and weatherstack API</li>
+<li>postman-request</li>
+</ul>
+<h2>About</h2>
+<p>The search field fetches weather data about the entered location. That data is used to modify the synthesizer and sequencer's parameters built in Tone.js. The rate of the sequence is calculated based on what time of the day you are using the app. Keywords from the weather description trigger different sequences (arrays of notes that are looped). The most popular descriptor is &quot;cloudy&quot;, so that is the most heard sequence.
+<br><br>
+The visualizer takes the audio context from Tone.js and outputs a visualization of the wave shapes. This visualizer is built using an api built on top of html's canvas api called pts.js.
+<br><br>
+The biggest challenge with this project is consistency across platforms. Currently the audio doesn't work well on android phones, but is seems to work well with apple, iphone, and ubuntu.</p>
+<h2>Inspiration:</h2>
+<p>This project was inspired from the common weather apps used for students to learn servers and http requests. I thought it'd be interesting to generate some type of synthesizer from the parameters that are received from your weather forecast.
+<br><br>
+As for a conceptual inspiration, I have to acknowledge the brilliant, Brian Eno. His work in generative art and music is unparalleled.</p>
+
+    </div>
+</article>
+        </div>
+      </main>
+    
+
+    <footer class="pysch-bar flex  justify-center items-center space-x-3 p-4 text-white z-10 mt-16">
+    <p>© Dillon Kelley 2021</p>
+    
+    
+    
+</footer>
+  </body>
+</html>
