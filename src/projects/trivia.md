@@ -8,7 +8,7 @@ img: https://res.cloudinary.com/dilldog-industries/image/upload/v1615526720/dill
 # Socially Distanced Trivia
 
 <div class="relative mb-8" style="padding-top: 56.25%">
-<iframe class="absolute inset-0 w-full h-full my-4" src="https://www.youtube.com/embed/RgV-MHk8eD4?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="absolute inset-0 w-full h-full my-4" src="https://www.youtube.com/embed/36vUIEX3Orw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <br><br>
 
@@ -23,7 +23,6 @@ website: <a href="https://socially-distanced-trivia.vercel.app/" target="_blank"
 - MongoDB (atlas)
 - React
 - Material UI
-
 
 ## About
 
