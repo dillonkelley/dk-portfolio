@@ -14,6 +14,7 @@
     <meta property="og:site_name" content="{{ metadata.name }}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ metadata.url}}"/>
+    <meta name="robots" content="max-snippet:20, max-image-preview:large"/>
 
     {% if metadata.author.twitterHandle %}
       <meta name="twitter:creator" content="@{{ metadata.author.twitterHandle | replace('@', '') }}"/>
