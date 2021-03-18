@@ -27,7 +27,7 @@ Website: <a class="mb-2 hover-state mb-2" href="https://cranky-pare-b2c0ec.netli
 
 ## About
 
-The idea for this site/app came from my Mom. She always kept tabs of recipe sites open on her computer, so she wouldn't close her tabs and risk loosing the recipe. I offered this to her so she can close out of her tabs and save her favorite dishes.
+The idea for this site/app came from my Mom. She always kept tabs of recipe sites open on her computer, so she wouldn't close her tabs and risk losing the recipe. I offered this to her so she can close out of her tabs and save her favorite dishes.
 <br><br>
 Login or sign-up using firebase authentication. Once verified, you can submit the url of your favorite recipe's website. The app will scrape the recipe from the input website and store the information in the firebase database. Sign off and come back to the app anytime to view your recipes. You also have the option of deleting a recipe if you choose to. This project's frontend is built with Vue.js and Bootstrap. I used this project to get familiar with Vue.
 <br><br>
