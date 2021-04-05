@@ -96,6 +96,14 @@
   animation: pys-minimalism 30s ease infinite;
 }
 
+.pysch-lines {
+  color: linear-gradient(270deg, #ff0d0d, #efff0d, #2fff0d, #0d52ff, #ff0000);
+
+  -webkit-animation: pys-minimalism 30s ease infinite;
+  -moz-animation: pys-minimalism 30s ease infinite;
+  animation: pys-minimalism 30s ease infinite;
+}
+
 @-webkit-keyframes pys-minimalism {
   0% {
     background-position: 0% 50%;

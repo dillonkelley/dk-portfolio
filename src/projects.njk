@@ -16,17 +16,17 @@ layout: default.njk
 
             <div class="w-full sm:w-3/4 lg:w-4/5">
                 {%- for project in collections.project -%}
-                    <a href="/projects/{{project.data.slug}}">
-                        <div class="flex flex-col md:flex-row mb-4 p-2 px-2 hover:opacity-70 space-x-2">
+                    <a href="/projects/{{project.data.slug}}" class="group">
+                        <div class="flex flex-col md:flex-row mb-4 p-2 px-2 space-x-2">
                             <div class="md:w-1/2">
-                                <img class="w-full sm:w-3/4 md:w-full rounded-lg border border-blue-900 p-1"src="{{project.data.img}}"/>
+                                <img class="w-full sm:w-3/4 md:w-full rounded-lg border border-blue-900 p-1 group-hover:opacity-70" src="{{project.data.img}}"/>
                             </div>
 
                             <div class="md:w-1/2 mr-2">
-                                <h4 class="font-bold">{{project.data.title}}</h4>
+                                <h4 class="font-bold group-hover:text-blue">{{project.data.title}}</h4>
                                 <div class="flex space-x-4 md:space-x-0 md:flex-col md:justify-start">
                                     {%- for stack in project.data.stack-%}
-                                        <p>{{stack}}</p>
+                                        <p class="group-hover:text-blue">{{stack}}</p>
                                     {%- endfor -%}
                                 </div>
                             </div>

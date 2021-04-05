@@ -1,7 +1,8 @@
 <nav
-      class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
+      class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0 bg-white-pure" 
       x-data="{ 
         isOpen: false,
+        
          }"
       @keydown.escape="isOpen = false"
       :class="{ 'shadow-lg bg-green-light' : isOpen , 'bg-white' : !isOpen}"
@@ -14,7 +15,8 @@
           href="/"
         >
       <div class="pl-2 w-16">
-        <img class="hover:bg-blue rounded" src="https://res.cloudinary.com/dilldog-industries/image/upload/w_100/v1615325563/dills-corner/DK_b08umu.png" alt="dk-logo"/>
+
+        <img class="hover:bg-blue rounded" src="https://res.cloudinary.com/dilldog-industries/image/upload/w_80/v1615325563/dills-corner/DK_logo.png" alt="dk-logo"/>
       </div>
     </a>
   </div>
@@ -22,8 +24,9 @@
   <!--Toggle button (hidden on large screens)-->
   <button
         @click="isOpen = !isOpen"
+        
         type="button"
-        class="block lg:hidden px-2 text-gray-darkest hover:text-blue-dark focus:outline-none focus:text-green-dark"
+        class="block lg:hidden px-2 text-blue hover:text-green focus:outline-none focus:text-green-dark"
         :class="{ 'transition transform-180': isOpen }"
         :aria-expanded="isOpen"
         aria-controls="nav-list"
@@ -59,7 +62,7 @@
         >
       <li class="mr-3">
         <a
-              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl"
+              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl font-black lg:text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/projects"
               @click="isOpen = false"
@@ -68,7 +71,7 @@
       </li>
       <li class="mr-3">
         <a
-              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl"
+              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl font-black lg:text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/about"
               @click="isOpen = false"
@@ -77,7 +80,7 @@
       </li>
       <li class="mr-3">
         <a
-              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl lg:text-xl"
+              class="inline-block text-gray-darkest hover-state lg:mx-4 w-full p-4 lg:p-1 lg:w-3/4 text-2xl font-black lg:text-xl"
               :class="{ 'text-center my-4': isOpen, '': !isOpen }"
               href="/contact"
               @click="isOpen = false"
