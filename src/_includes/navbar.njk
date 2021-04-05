@@ -7,6 +7,7 @@
       @keydown.escape="isOpen = false"
       :class="{ 'shadow-lg bg-green-light' : isOpen , 'bg-white' : !isOpen}"
       :aria-expanded="isOpen"
+      aria-labelledby="nav-heading"
     >
   <!--Logo etc-->
   <div class="flex items-center flex-shrink-0 text-white mr-6">
